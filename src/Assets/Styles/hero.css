@@ -1,0 +1,144 @@
+/* Hero Section Layout */
+.hero-main-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 6rem;
+}
+
+/* Blur Circles */
+.hero-blur-circle {
+  position: absolute;
+  filter: blur(80px);
+}
+
+/* Update other generic class names with hero- prefix */
+.hero-container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.content-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Profile Card */
+.profile-card {
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 280px;
+  background-color: #1A1A1A;
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.profile-image-container {
+  background-color: rgba(249, 115, 22, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.profile-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.profile-description {
+  color: rgba(156, 163, 175, 1);
+  text-align: center;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: rgba(249, 115, 22, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(249, 115, 22);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: rgb(249, 115, 22);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Media Queries */
+@media (min-width: 640px) {
+  .container-custom {
+    padding: 0 1.5rem;
+  }
+  
+  .profile-card {
+    max-width: 384px;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding-top: 5rem;
+  }
+  
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+  }
+  
+  .profile-card {
+    aspect-ratio: auto;
+  }
+}
