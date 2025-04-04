@@ -9,8 +9,8 @@ import {
 } from "lucide-react";
 import kartikProfile from "../Assets/KartikProfile.png";
 import resume from "../Assets/Docfile/PM-KartikCV.pdf";
-import productLedBadge from "../Assets/Certificates/badge.png"; // Add this import
 import "../Assets/Styles/hero.css";
+import badge from "../Assets/Certificates/badge.png";
 
 const Hero = () => {
   return (
@@ -18,6 +18,18 @@ const Hero = () => {
       id="home"
       className="hero-main-section relative min-h-screen flex items-center pt-24 sm:pt-32 md:pt-20"
     >
+      {/* Floating badge with reduced size */}
+      <div className="fixed bottom-4 right-4 z-50 animate-float">
+        <div className="relative group">
+          <img
+            src={badge}
+            alt="Product-led Certified Badge"
+            className="w-16 h-16 md:w-20 md:h-20 rounded-full shadow-lg hover:scale-110 transition-transform duration-300"
+          />
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
+        </div>
+      </div>
+
       <div className="hero-blur-circle w-[200px] sm:w-[400px] h-[200px] sm:h-[400px] bg-pm-accent/20 -top-20 -left-20"></div>
       <div className="hero-blur-circle w-[150px] sm:w-[300px] h-[150px] sm:h-[300px] bg-blue-500/20 bottom-40 right-10"></div>
 
@@ -177,7 +189,6 @@ const Hero = () => {
       </div>
 
       {/* Make scroll indicator visible only on larger screens */}
-      {/* Scroll indicator */}
       <a
         href="#about"
         className="hidden md:flex absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 flex-col items-center text-pm-light/60 hover:text-pm-accent transition-colors"
@@ -185,16 +196,6 @@ const Hero = () => {
         <span className="text-xs md:text-sm mb-2">Scroll Down</span>
         <ChevronDown className="w-4 h-4 md:w-5 md:h-5 animate-bounce" />
       </a>
-
-      {/* Product-led Certified Badge */}
-      <div className="fixed bottom-6 right-6 z-50 hover:scale-105 transition-transform">
-        <img
-          src={productLedBadge}
-          alt="Product-led Certified Badge"
-          className="w-20 h-20 sm:w-24 sm:h-24 rounded-full shadow-lg mix-blend-normal opacity-90 backdrop-blur-sm"
-          style={{ background: 'transparent' }}
-        />
-      </div>
     </section>
   );
 };
