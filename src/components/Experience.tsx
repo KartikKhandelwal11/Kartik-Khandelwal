@@ -79,27 +79,27 @@ const Experience = () => {
         <div className="text-center mb-20">
           <div className="inline-block relative">
             <div
-              className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 
+              className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-violet-500/10 
                           blur-[100px] rounded-full"
             ></div>
-            <h2 className="relative flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-4xl md:text-6xl font-bold">
+            <h2 className="relative flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-3xl md:text-5xl font-bold">
               <div className="relative">
-                <span className="absolute -inset-1 bg-gradient-to-r from-purple-600/20 to-pink-600/20 blur-md rounded-lg"></span>
-                <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-purple-400 to-purple-200">
+                <span className="absolute -inset-1 bg-white/20 blur-md rounded-lg"></span>
+                <span className="relative text-white">
                   Work
                 </span>
               </div>
               <div className="relative">
-                <span className="absolute -inset-1 bg-gradient-to-r from-pink-600/20 to-purple-600/20 blur-md rounded-lg"></span>
-                <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-pink-200 via-pink-400 to-pink-200">
+                <span className="absolute -inset-1 bg-purple-600/20 blur-md rounded-lg"></span>
+                <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
                   Experience
                 </span>
               </div>
             </h2>
           </div>
           <div className="mt-8 relative">
-            <span className="absolute -left-4 -top-4 w-3 h-3 bg-purple-500 rounded-full animate-ping"></span>
-            <span className="absolute -right-4 -bottom-4 w-3 h-3 bg-pink-500 rounded-full animate-ping"></span>
+            <span className="absolute -left-4 -top-4 w-3 h-3 bg-cyan-500 rounded-full animate-ping"></span>
+            <span className="absolute -right-4 -bottom-4 w-3 h-3 bg-violet-500 rounded-full animate-ping"></span>
             <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               Crafting digital experiences that drive business growth
             </p>

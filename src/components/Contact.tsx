@@ -9,6 +9,7 @@ import {
   MessageCircle,
   ArrowRight,
 } from "lucide-react";
+import { FaGithub } from "react-icons/fa";  // Add this import
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
 import "../Assets/Styles/contact.css";
@@ -68,25 +69,33 @@ const Contact = () => {
       className="relative min-h-[90vh] bg-[#0A0A0A] py-8 md:py-16 overflow-hidden"
       id="contact"
     >
-      {/* Animated Background - adjusted for mobile */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-purple-900/20 via-transparent to-transparent"></div>
-        <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-radial from-blue-900/20 via-transparent to-transparent"></div>
-        <div className="absolute w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-purple-500/5 rounded-full filter blur-[100px] animate-pulse -top-20 md:-top-40 -right-20 md:-right-40"></div>
-        <div className="absolute w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-blue-500/5 rounded-full filter blur-[100px] animate-pulse -bottom-20 md:-bottom-40 -left-20 md:-left-40"></div>
-      </div>
+      <div className="absolute inset-0 bg-grid-white/[0.02] -z-0"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header - adjusted font sizes */}
-        <div className="max-w-3xl mx-auto text-center mb-10 md:mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">
-              Let's Create Something
-            </span>
-          </h2>
-          <p className="text-gray-400 text-base md:text-lg px-4">
-            Ready to bring your ideas to life? I'm just a message away.
-          </p>
+        {/* Header Section */}
+        <div className="text-center mb-20">
+          <div className="inline-block relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-violet-500/10 blur-[100px] rounded-full"></div>
+            <h2 className="relative flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-3xl md:text-5xl font-bold">
+              <div className="relative">
+                <span className="absolute -inset-1 bg-white/20 blur-md rounded-lg"></span>
+                <span className="relative text-white">Let's</span>
+              </div>
+              <div className="relative">
+                <span className="absolute -inset-1 bg-purple-600/20 blur-md rounded-lg"></span>
+                <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
+                  Connect
+                </span>
+              </div>
+            </h2>
+          </div>
+          <div className="mt-8 relative">
+            <span className="absolute -left-4 -top-4 w-3 h-3 bg-cyan-500 rounded-full animate-ping"></span>
+            <span className="absolute -right-4 -bottom-4 w-3 h-3 bg-violet-500 rounded-full animate-ping"></span>
+            <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+              Ready to bring your ideas to life? I'm just a message away.
+            </p>
+          </div>
         </div>
 
         {/* Main Content */}
@@ -152,6 +161,11 @@ const Contact = () => {
                         icon: Linkedin,
                         link: "https://www.linkedin.com/in/pm-kartik",
                         color: "from-[#0077B5]/20",
+                      },
+                      {
+                        icon: FaGithub,  // Use FaGithub instead of Github
+                        link: "https://github.com/KartikKhandelwal11",
+                        color: "from-[#333]/20",
                       },
                       {
                         icon: Instagram,

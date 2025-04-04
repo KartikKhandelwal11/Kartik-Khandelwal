@@ -28,29 +28,34 @@ const Achievements = () => {
 
   return (
     <section className="py-16 bg-gradient-to-b from-[#0A0A0A] via-[#120B2E] to-[#0A0A0A] relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px]" />
-      </div>
+      <div className="absolute inset-0 bg-grid-white/[0.02] -z-0"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
-        <motion.div
-          variants={fadeIn("up", "tween", 0.2, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-              Key Achievements
-            </span>
-          </h2>
-          <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-            Showcasing impactful contributions and recognition in the field
-          </p>
-        </motion.div>
+        {/* Header Section */}
+        <div className="text-center mb-20">
+          <div className="inline-block relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-violet-500/10 blur-[100px] rounded-full"></div>
+            <h2 className="relative flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-3xl md:text-5xl font-bold">
+              <div className="relative">
+                <span className="absolute -inset-1 bg-white/20 blur-md rounded-lg"></span>
+                <span className="relative text-white">Key</span>
+              </div>
+              <div className="relative">
+                <span className="absolute -inset-1 bg-purple-600/20 blur-md rounded-lg"></span>
+                <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
+                  Achievements
+                </span>
+              </div>
+            </h2>
+          </div>
+          <div className="mt-8 relative">
+            <span className="absolute -left-4 -top-4 w-3 h-3 bg-cyan-500 rounded-full animate-ping"></span>
+            <span className="absolute -right-4 -bottom-4 w-3 h-3 bg-violet-500 rounded-full animate-ping"></span>
+            <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+              Showcasing impactful contributions and recognition in the field
+            </p>
+          </div>
+        </div>
 
         {/* Main Achievements */}
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-16">

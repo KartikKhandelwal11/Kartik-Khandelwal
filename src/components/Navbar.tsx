@@ -77,11 +77,11 @@ const Navbar = () => {
     >
       <div className="container-custom mx-auto flex items-center justify-between py-4 px-6">
         <a href="#home" className="text-3xl font-bold relative group z-50">
-          <span className="bg-gradient-to-r from-pm-accent via-purple-500 to-pink-500 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-purple-400 to-purple-600 text-transparent bg-clip-text">
             KK
           </span>
-          <span className="text-pm-light font-light">.</span>
-          <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-pm-accent via-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full rounded-full"></span>
+          <span className="text-white font-light">.</span>
+          <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-purple-400 to-purple-600 transition-all duration-300 group-hover:w-full rounded-full"></span>
         </a>
 
         <nav className="hidden md:block">
@@ -92,13 +92,13 @@ const Navbar = () => {
                   href={link.href}
                   className={`text-sm font-medium relative group px-4 py-2 rounded-full transition-all duration-300 ${
                     activeSection === link.href.substring(1)
-                      ? "text-pm-accent bg-white/5"
-                      : "text-pm-light/90 hover:text-pm-accent hover:bg-white/5"
+                      ? "text-purple-400 bg-white/5"
+                      : "text-white/90 hover:text-purple-400 hover:bg-white/5"
                   }`}
                 >
                   {link.name}
                   <span
-                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-pm-accent via-purple-500 to-pink-500 rounded-full transition-all duration-300 ${
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full transition-all duration-300 ${
                       activeSection === link.href.substring(1)
                         ? "w-1/2"
                         : "w-0 group-hover:w-1/2"
@@ -137,24 +137,15 @@ const Navbar = () => {
                   href={link.href}
                   className={`relative flex items-center gap-2 py-5 text-lg font-medium transition-all duration-300 group ${
                     activeSection === link.href.substring(1)
-                      ? "text-pm-accent pl-6 bg-white/[0.03] rounded-lg"
-                      : "text-pm-light/90 hover:text-pm-accent pl-0 hover:pl-6 hover:bg-white/[0.02] rounded-lg"
+                      ? "text-purple-400 pl-6 bg-white/[0.03] rounded-lg"
+                      : "text-white/90 hover:text-purple-400 pl-0 hover:pl-6 hover:bg-white/[0.02] rounded-lg"
                   }`}
-                  onClick={(e) => {
-                    setIsOpen(false);
-                    setTimeout(() => {
-                      document
-                        .getElementById(link.href.substring(1))
-                        ?.scrollIntoView({ behavior: "smooth" });
-                    }, 100);
-                    e.preventDefault();
-                  }}
                 >
                   <span
                     className={`h-[2px] ${
                       activeSection === link.href.substring(1)
-                        ? "w-10 bg-gradient-to-r from-pm-accent to-purple-500"
-                        : "w-0 group-hover:w-10 bg-gradient-to-r from-pm-accent to-purple-500 transition-all duration-300"
+                        ? "w-10 bg-gradient-to-r from-purple-400 to-purple-600"
+                        : "w-0 group-hover:w-10 bg-gradient-to-r from-purple-400 to-purple-600 transition-all duration-300"
                     }`}
                   ></span>
                   {link.name}

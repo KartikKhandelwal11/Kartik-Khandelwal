@@ -21,11 +21,17 @@ const About = () => {
           <div className="text-center mb-20">
             <div className="inline-block relative">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-violet-500/10 blur-[100px] rounded-full"></div>
-              <h2 className="relative flex items-center justify-center gap-4 text-4xl md:text-6xl font-bold">
+              <h2 className="relative flex items-center justify-center gap-4 text-3xl md:text-5xl font-bold">
                 <div className="relative">
-                  <span className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-violet-500/20 blur-md rounded-lg"></span>
-                  <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-cyan-200 via-cyan-400 to-violet-200">
-                    About Me
+                  <span className="absolute -inset-1 bg-white/20 blur-md rounded-lg"></span>
+                  <span className="relative text-white">
+                    About
+                  </span>
+                </div>
+                <div className="relative">
+                  <span className="absolute -inset-1 bg-purple-600/20 blur-md rounded-lg"></span>
+                  <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
+                    Me
                   </span>
                 </div>
               </h2>

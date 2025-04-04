@@ -54,14 +54,14 @@ const Education = () => {
                           blur-[100px] rounded-full"></div>
             <h2 className="relative flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-3xl md:text-5xl font-bold">
               <div className="relative">
-                <span className="absolute -inset-1 bg-gradient-to-r from-purple-600/20 to-pink-600/20 blur-md rounded-lg"></span>
-                <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-purple-400 to-purple-200">
+                <span className="absolute -inset-1 bg-white/20 blur-md rounded-lg"></span>
+                <span className="relative text-white">
                   Academic
                 </span>
               </div>
               <div className="relative">
-                <span className="absolute -inset-1 bg-gradient-to-r from-pink-600/20 to-purple-600/20 blur-md rounded-lg"></span>
-                <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-pink-200 via-pink-400 to-pink-200">
+                <span className="absolute -inset-1 bg-purple-600/20 blur-md rounded-lg"></span>
+                <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
                   Journey
                 </span>
               </div>
