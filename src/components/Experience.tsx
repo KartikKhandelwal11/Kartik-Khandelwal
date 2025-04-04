@@ -109,7 +109,20 @@ const Experience = () => {
         {/* Timeline Section */}
         <div className="timeline-container relative">
           {/* Timeline line */}
-          <div className="timeline-line absolute left-8 sm:left-1/2 w-0.5 h-full transform sm:-translate-x-1/2"></div>
+          <div className="timeline-line absolute left-8 sm:left-1/2 w-0.5 h-full transform sm:-translate-x-1/2">
+            {/* Star at the end of timeline */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full">
+              <div className="timeline-dot w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full border-4 border-black flex items-center justify-center">
+                <svg
+                  className="w-4 h-4 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                </svg>
+              </div>
+            </div>
+          </div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (

@@ -1,0 +1,36 @@
+.about-title {
+  position: relative;
+  display: inline-block;
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #22d3ee, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.about-title:hover::after {
+  width: 100%;
+}
+
+.about-glow {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.2), rgba(139, 92, 246, 0.2));
+  border-radius: 9999px;
+  filter: blur(80px);
+  z-index: -10;
+}
+
+@media (min-width: 768px) {
+  .about-glow {
+    width: 200px;
+    height: 200px;
+  }
+}
