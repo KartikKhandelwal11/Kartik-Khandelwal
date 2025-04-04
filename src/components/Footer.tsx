@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Linkedin, Github } from "lucide-react";
+import logo from "../Assets/favicon.png"; // Add logo import
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -35,10 +36,12 @@ const Footer = () => {
           </div>
 
           {/* Logo and Copyright - Bottom Left */}
-          <div className="flex items-center gap-2">
-            <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent font-bold">
-              KK
-            </span>
+          <div className="flex items-center gap-3">
+            <img
+              src={logo}
+              alt="KK Logo"
+              className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+            />
             <span className="text-gray-400 text-sm">
               &copy; {currentYear} All rights reserved.
             </span>

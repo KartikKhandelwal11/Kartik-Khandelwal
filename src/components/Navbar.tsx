@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+// Add logo import
+import logo from "../Assets/favicon.png"; // Make sure the path matches your image location
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,9 +63,9 @@ const Navbar = () => {
   // Add this useEffect to handle body scroll
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
   }, [isOpen]);
 
@@ -76,12 +78,12 @@ const Navbar = () => {
       }`}
     >
       <div className="container-custom mx-auto flex items-center justify-between py-4 px-6">
-        <a href="#home" className="text-3xl font-bold relative group z-50">
-          <span className="bg-gradient-to-r from-purple-400 to-purple-600 text-transparent bg-clip-text">
-            KK
-          </span>
-          <span className="text-white font-light">.</span>
-          <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-purple-400 to-purple-600 transition-all duration-300 group-hover:w-full rounded-full"></span>
+        <a href="#home" className="relative group z-50">
+          <img
+            src={logo}
+            alt="KK Logo"
+            className="w-8 h-8 sm:w-10 sm:h-10 object-contain hover:scale-105 transition-transform duration-300"
+          />
         </a>
 
         <nav className="hidden md:block">
@@ -156,7 +158,9 @@ const Navbar = () => {
           </ul>
 
           <div className="border-t border-white/5 py-8 mb-8">
-            <p className="text-pm-light/40 text-sm">© 2024 All rights reserved.</p>
+            <p className="text-pm-light/40 text-sm">
+              © 2024 All rights reserved.
+            </p>
           </div>
         </div>
       </div>
