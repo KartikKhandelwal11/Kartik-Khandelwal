@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Skills = () => {
   const technicalSkills = [
@@ -32,7 +32,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-20 relative">
+    <section className="py-20 relative" id="skills">
       {/* Header Section - Keeping as requested */}
       <div className="text-center mb-20">
         <div className="inline-block relative">
@@ -68,7 +68,9 @@ const Skills = () => {
             <div className="relative bg-black/40 backdrop-blur-xl rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-purple-500 text-2xl">🎮</span>
-                <h3 className="text-xl font-semibold text-white">Technical Skills</h3>
+                <h3 className="text-xl font-semibold text-white">
+                  Technical Skills
+                </h3>
               </div>
               <div className="space-y-3">
                 {technicalSkills.map((skill, index) => (
@@ -110,7 +112,9 @@ const Skills = () => {
               <div className="relative bg-black/40 backdrop-blur-xl rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 h-full">
                 <div className="flex items-center gap-3 mb-6">
                   <span className="text-blue-500 text-2xl">👤</span>
-                  <h3 className="text-xl font-semibold text-white">Personal Skills</h3>
+                  <h3 className="text-xl font-semibold text-white">
+                    Personal Skills
+                  </h3>
                 </div>
                 <div className="flex flex-wrap gap-3">
                   {personalSkills.map((skill, index) => (
