@@ -1,7 +1,15 @@
 import React from "react";
-import { ChevronDown, Mail, Linkedin, MapPin, Phone, MessageCircle } from "lucide-react";
+import {
+  ChevronDown,
+  Mail,
+  Linkedin,
+  MapPin,
+  Phone,
+  MessageCircle,
+} from "lucide-react";
 import kartikProfile from "../Assets/KartikProfile.png";
 import resume from "../Assets/Docfile/PM-KartikCV.pdf";
+import productLedBadge from "../Assets/Certificates/badge.png"; // Add this import
 import "../Assets/Styles/hero.css";
 
 const Hero = () => {
@@ -169,6 +177,7 @@ const Hero = () => {
       </div>
 
       {/* Make scroll indicator visible only on larger screens */}
+      {/* Scroll indicator */}
       <a
         href="#about"
         className="hidden md:flex absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 flex-col items-center text-pm-light/60 hover:text-pm-accent transition-colors"
@@ -176,6 +185,16 @@ const Hero = () => {
         <span className="text-xs md:text-sm mb-2">Scroll Down</span>
         <ChevronDown className="w-4 h-4 md:w-5 md:h-5 animate-bounce" />
       </a>
+
+      {/* Product-led Certified Badge */}
+      <div className="fixed bottom-6 right-6 z-50 hover:scale-105 transition-transform">
+        <img
+          src={productLedBadge}
+          alt="Product-led Certified Badge"
+          className="w-20 h-20 sm:w-24 sm:h-24 rounded-full shadow-lg mix-blend-normal opacity-90 backdrop-blur-sm"
+          style={{ background: 'transparent' }}
+        />
+      </div>
     </section>
   );
 };

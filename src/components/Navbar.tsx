@@ -135,6 +135,7 @@ const Navbar = () => {
               <li key={link.name}>
                 <a
                   href={link.href}
+                  onClick={() => setIsOpen(false)}
                   className={`relative flex items-center gap-2 py-5 text-lg font-medium transition-all duration-300 group ${
                     activeSection === link.href.substring(1)
                       ? "text-purple-400 pl-6 bg-white/[0.03] rounded-lg"
